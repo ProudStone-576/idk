@@ -10,8 +10,8 @@ const CONFIG = {
     welcomeSubtitle: "There’s something I’ve wanted to tell you, so I made this little corner of the internet just for us.",
     siteTitle: "A Sister I Found, A Bond I Choose ❤️",
     reminder: "“You don’t need my permission to live your life. You just need to know that you always have someone in your corner.”",
-    brotherName: "Paaji",
-    sisterName: "Behen",
+    brotherName: "Simar",
+    sisterName: "Sana",
     signature: "Your forever Paaji.",
   },
 
@@ -62,7 +62,7 @@ const CONFIG = {
 
   // Section 7 — the letter inside the envelope. The last one is a highlight.
   finalLetter: [
-    "Whenever life gets overwhelming, whenever you feel alone, or whenever you just need someone to listen, remember that you’ve got a Paaji.",
+    "Whenever life gets overwhelming, whenever you feel alone, or whenever you just need someone to listen, remember that you’ve got me.",
     "Keep growing, keep smiling, keep making questionable decisions (occasionally 😂), and never stop being you.",
     "Love you, little troublemaker. ❤️",
   ],
