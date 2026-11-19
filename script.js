@@ -33,12 +33,13 @@ const CONFIG = {
   // Photo scrapbook — put pictures in assets/photos/ and set `src`.
   // Leave `src` empty ("") to show a cute placeholder frame.
   photos: [
-    { src: "", caption: "that one random day", emoji: "📸" },
-    { src: "", caption: "us being silly", emoji: "🤪" },
-    { src: "", caption: "festival vibes", emoji: "🪔" },
-    { src: "", caption: "chai & gossip", emoji: "☕" },
-    { src: "", caption: "the blurry one we love", emoji: "🌀" },
-    { src: "", caption: "add your fav here", emoji: "💗" },
+    // `position` = which part of the photo stays in the frame (e.g. "center 30%" keeps faces near the top)
+    { src: "assets/photos/us-being-silly.jpg", caption: "us being silly", emoji: "🤪", position: "center 25%" },
+    { src: "assets/photos/chai-and-gossip.jpg", caption: "chai & gossip", emoji: "☕", position: "center 35%" },
+    { src: "assets/photos/my-favourite.jpg", caption: "my favourite", emoji: "💗", position: "center 55%" },
+    { src: "assets/photos/random-day.jpg", caption: "that one random day", emoji: "📸", position: "center 35%" },
+    { src: "assets/photos/blurry-one.jpg", caption: "the blurry one we love", emoji: "🌀", position: "center 60%" },
+    { src: "assets/photos/one-of-the-favs.jpg", caption: "one of the favs", emoji: "🫶", position: "center 40%" },
   ],
 
   // Section 3 — front is what she sees first, back is revealed on tap.
@@ -101,10 +102,12 @@ CONFIG.photos.forEach((ph, i) => {
   const box = document.createElement("div");
   box.className = "photo";
   if (ph.src) {
+    box.classList.add("has-img");
     const img = document.createElement("img");
     img.src = ph.src;
     img.alt = ph.caption;
     img.loading = "lazy";
+    if (ph.position) img.style.objectPosition = ph.position;
     box.appendChild(img);
   } else {
     box.innerHTML = `<span><span class="ph-emoji">${ph.emoji || "📷"}</span>photo goes here</span>`;
